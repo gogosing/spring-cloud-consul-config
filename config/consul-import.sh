@@ -18,7 +18,7 @@ fi
 
 importCount=0 # import 수 조회 변수 선언
 
-for file in *${profileSuffix}; do # 파일 목록 조회 Loop
+for file in **/*${profileSuffix}; do # 파일 목록 조회 Loop
     if [ -s $file ]; then # 내용이 존재하는 파일이라면
         filename="$(basename "$file")" # config file 명 조회
         profileName=${filename%$profileSuffix} # profile file 파일명 뒤에 삭제 처리
